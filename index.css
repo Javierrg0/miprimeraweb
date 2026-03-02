@@ -1,0 +1,227 @@
+:root {
+  --color-1: #da4a4a; 
+  --color-2: #ffe16be5;
+  --color-3: #92ce92;
+  --color-4: #b597de; 
+  --color-5: #da9f84; 
+  --color-6: #ffa9d4; 
+  --color-7: #f5f5dc; 
+  --color-8: white;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100vh; 
+    width: 100vw;  
+    overflow-x: hidden; 
+}
+
+body {
+    font-family: sans-serif;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+}
+
+
+nav {
+    flex-shrink: 0; 
+}
+
+nav ul {
+    display: flex;
+    list-style: none; 
+    background-color: burlywood;
+    flex-wrap: wrap; 
+}
+
+nav ul li {
+    border: 1px solid black;
+    padding: 0.5em;
+    font-size: 0.8rem;
+    width: 5rem;
+    text-align: center;
+}
+
+nav ul li:hover {
+    background-color: brown;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--color-8);
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+section#indice {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    gap: 10px;
+    height: 100%; 
+    width: 100%;  
+    padding: 10px; 
+
+    grid-template-areas:
+        "Mic Mic Mic Nev Nev Nev Nev Nev Nev"
+        "Mic Mic Mic Nev Nev Nev Nev Nev Nev"
+        "Mic Mic Mic Bat Bat Bat Bat Bat Bat"
+        "Tos Tos Tos Bat Bat Bat Bat Bat Bat"
+        "Tos Tos Tos Bat Bat Bat Bat Bat Bat"
+        "Tos Tos Tos Hor Hor Hor Hor Hor Hor"
+        "Tos Tos Tos Hor Hor Hor Hor Hor Hor";
+}
+
+
+#Mic {
+    grid-area: Mic;
+    background-color: var(--color-1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; 
+}
+
+#Tos {
+    grid-area: Tos;
+    background-color: var(--color-2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+#Bat {
+    grid-area: Bat;
+    background-color: var(--color-3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+#Nev {
+    grid-area: Nev;
+    background-color: var(--color-4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+#Hor {
+    grid-area: Hor;
+    background-color: var(--color-6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.indice_item {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.indice_item img {
+    max-width: 100%; 
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain; 
+}
+
+
+footer {
+    flex-shrink: 0; 
+    display: flex;
+    background-color: burlywood;
+    color: white;
+    width: 100%;
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    section#indice {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas:
+            "Mic Mic Nev Nev"
+            "Mic Mic Nev Nev"
+            "Tos Tos Bat Bat"
+            "Tos Tos Bat Bat"
+            "Hor Hor Hor Hor"
+            "Hor Hor Hor Hor";
+    }
+    
+}
+
+@media screen and (max-width: 480px) {
+    section#indice {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "Mic"
+            "Tos"
+            "Bat"
+            "Nev"
+            "Hor";
+    }
+    
+}
+
+@media print {
+    img{
+        display: none;
+    }
+}
+
+@media (prefers-color-scheme: light){
+    :root {
+  --color-1: #FF006E; 
+  --color-2: #FFBE0B; 
+  --color-3: #3A86FF; 
+  --color-4: #8338EC;
+  --color-5: #FB5607; 
+  --color-6: #00F5D4; 
+  --color-7: #f5f5dc; 
+  --color-8: white ;
+}
+}
+
+@media (prefers-color-scheme: dark){
+    :root {
+  --color-1: #da4a4a; 
+  --color-2: #ffe16be5;
+  --color-3: #92ce92;
+  --color-4: #b597de; 
+  --color-5: #da9f84; 
+  --color-6: #ffa9d4; 
+  --color-7: #f5f5dc; 
+  --color-8: white;
+}
+}
+
+
+main {
+    margin-left: 250px;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
